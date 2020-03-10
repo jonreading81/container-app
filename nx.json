@@ -1,0 +1,35 @@
+{
+  "npmScope": "monorepo-poc",
+  "implicitDependencies": {
+    "workspace.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "service-a": {
+      "tags": []
+    },
+    "service-a-e2e": {
+      "tags": [],
+      "implicitDependencies": ["service-a"]
+    },
+    "service-b": {
+      "tags": []
+    },
+    "service-b-e2e": {
+      "tags": [],
+      "implicitDependencies": ["service-b"]
+    },
+    "shared-components": {
+      "tags": []
+    },
+    "http-client": {
+      "tags": []
+    }
+  }
+}
